@@ -1,0 +1,48 @@
+﻿<Page x:Class="TicTacToe.GameBoard"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      Loaded="frame_loaded"
+	   Title="GameBoard" >
+
+    <Grid x:Name="Board" >
+        <Grid.Background>
+            <ImageBrush ImageSource="Logo.png"/>
+        </Grid.Background>
+        <Grid.RowDefinitions >
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*" ></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+            <ColumnDefinition Width="*" ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <DockPanel Grid.Column="0" Grid.Row="1" LastChildFill="False">
+            <Button Name="Player1First" Content="Go First!" DockPanel.Dock="Top" Background="Transparent" Foreground="White" Click="Player1First_Click" />
+            <Label Name="name_player_one" DockPanel.Dock="Top" Foreground="White" FontSize="25">Player 1:</Label>
+            <Label Name="score_player_one" DockPanel.Dock="Bottom"  Content="0" FontSize="25"></Label>
+        </DockPanel>
+        <DockPanel Grid.Column="5" Grid.Row="1" LastChildFill="False" >
+            <Button Name="Player2First" Content="Go First!" DockPanel.Dock="Top" Background="Transparent" Foreground="White" Click="Player2First_Click"/>
+            <Label Name="name_player_two" DockPanel.Dock="Top" Foreground="White" FontSize="25">Player 2:</Label>
+            <Label Name="score_player_two" DockPanel.Dock="Bottom" FontSize="25" Content="0"  ></Label>
+            
+        </DockPanel>
+        <Button FontFamily="Marlett" FontSize="25" Content="3" Foreground="Red" Background="Transparent" Click="Button_Click" />
+     <!--   <Button Name="Replay" Content="Replay?" Grid.Column="5" Grid.Row="0" Background="Transparent" Foreground="White" Click="Replay_Click" Visibility="Hidden"/> -->
+
+    </Grid>
+</Page>
